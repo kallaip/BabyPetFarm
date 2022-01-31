@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".PetActivity"
+    android:screenOrientation="landscape" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <com.dextergames.babypetfarm.PetView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+/>
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+<com.google.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/adView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/fullscreen_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerInParent="false"
+    ads:adSize="BANNER"
+    ads:adUnitId="a151e94bf11571e"
+    ads:loadAdOnCreate="false"
+    ads:test="false"
+    android:gravity="bottom|center_horizontal"
+    android:visibility="visible" />
+
+</RelativeLayout>
